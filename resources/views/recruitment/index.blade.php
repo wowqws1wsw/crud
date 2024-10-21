@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" />
     <link href="{{ asset('css/styles.css') }}" rel="stylesheet" />
 </head>
-<body id="page-top">
+<body id="page-top" style="padding-top: 70px;">
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark" id="mainNav">
         <div class="container">
             <a class="navbar-brand" href="#page-top"><img src="{{ asset('assets/img/15th_guards-logo.png') }}" alt="Logo" /></a>

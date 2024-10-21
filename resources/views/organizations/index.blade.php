@@ -16,7 +16,7 @@
     <!-- Core theme CSS (includes Bootstrap) -->
     <link href="{{ asset('css/styles.css') }}" rel="stylesheet" />
 </head>
-<body id="page-top">
+<body id="page-top" style="padding-top: 60px;">
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark" id="mainNav">
         <div class="container">

@@ -23,11 +23,7 @@ Route::prefix('recruitment')->name('recruitment.')->group(function() {
     Route::patch('/update/{id}', [RecruitmentController::class, 'update'])->name('update');
     Route::post('/search', [RecruitmentController::class, 'index'])->name('search');
     Route::get('/messages', [RecruitmentController::class, 'showMessages'])->name('messages.index');
-});
-
-// Admin-specific routes for Recruitment deletion
-Route::prefix('admin')->group(function () {
-    Route::delete('/recruitment/{id}', [RecruitmentController::class, 'destroy'])->name('recruitment.delete');
+    Route::delete('/destroy/{id}', [RecruitmentController::class, 'destroy'])->name('destroy'); 
 });
 
 // Organization Routes
@@ -38,7 +34,7 @@ Route::prefix('organization')->name('organizations.')->group(function () {
     Route::get('/create', [OrganizationController::class, 'create'])->name('create');
     Route::post('/store', [OrganizationController::class, 'store'])->name('store');
     Route::get('/edit/{id}', [OrganizationController::class, 'edit'])->name('edit');
-    Route::patch('/update/{id}', [OrganizationController::class, 'update'])->name('update'); // Corrected
+    Route::patch('/update/{id}', [OrganizationController::class, 'update'])->name('update'); 
     Route::post('/search', [OrganizationController::class, 'index'])->name('search');
-    Route::delete('/organizations/{id}', [OrganizationController::class, 'destroy'])->name('organizations.destroy');
+    Route::delete('/{id}', [OrganizationController::class, 'destroy'])->name('destroy'); 
 });

@@ -61,15 +61,11 @@ class RecruitmentController extends Controller
 
     public function destroy($id)
     {
-        $recruitment = Recruitment::find($id);
-
-        if (!$recruitment) {
-            return redirect()->back()->with('error', 'Recruitment not found!');
-        }
-
+        // Find and delete the recruitment entry
+        $recruitment = Recruitment::findOrFail($id);
         $recruitment->delete();
-
-        return redirect()->back()->with('success', 'Successfully deleted recruitment!');
+    
+        return redirect()->route('recruitment.index')->with('success', 'Recruitment deleted successfully.');
     }
 
     public function showMessages()
